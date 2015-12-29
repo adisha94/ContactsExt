@@ -51,6 +51,7 @@
 		3967F3F01C33129000CFF470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3967F3FC1C33140A00CFF470 /* MySwiftFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySwiftFile.swift; sourceTree = "<group>"; };
 		3967F4011C331A5E00CFF470 /* Main_Swift_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Main_Swift_Header.h; sourceTree = "<group>"; };
+		3967F4021C33262800CFF470 /* swiftplay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = swiftplay.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 				3967F3D01C33128F00CFF470 /* ViewController.swift */,
 				3967F3FC1C33140A00CFF470 /* MySwiftFile.swift */,
 				3967F3D21C33128F00CFF470 /* Main.storyboard */,
+				3967F4021C33262800CFF470 /* swiftplay.playground */,
 				3967F4011C331A5E00CFF470 /* Main_Swift_Header.h */,
 				3967F3D51C33128F00CFF470 /* Assets.xcassets */,
 				3967F3D71C33128F00CFF470 /* LaunchScreen.storyboard */,
