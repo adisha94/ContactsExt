@@ -9,5 +9,6 @@
 #ifndef Main_Swift_Header_h
 #define Main_Swift_Header_h
 
+#include Contact.swift;
 
 #endif /* Main_Swift_Header_h */
