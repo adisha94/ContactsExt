@@ -12,36 +12,48 @@ import Darwin
 
 class ContactInfo
 {
-    let name: String
+    let first_Name: String
+    let last_Name: String
     let phone_Number: Int
     let school: String
- 
-    init (contact_name: String, number: Int, school_info: String)
+    
+    init (contact_first_Name: String, contact_last_Name: String, number: Int, school_info: String)
     {
-        self.name = contact_name
+        self.first_Name = contact_first_Name
+        self.last_Name = contact_last_Name
         self.phone_Number = number
-        if (school_info.containsString("university") || school_info.containsString("college"))
+        
+        
+        
+        if (school_info.containsString("university") || school_info.containsString("college") || school_info.containsString("University") || school_info.containsString("College"))
         {
             self.school = school_info
         }
         else
         {
-            self.school = "Not finished high school yet"
+            self.school = "Not finished with high school yet"
         }
     }
     
-    func get_Name() -> String
-    {
-        return name;
-    }
+    //    func get_first_Name() -> String
+    //    {
+    //        return first_Name;
+    //    }
+    //
+    //    func get_last_Name() -> String
+    //    {
+    //        return last_Name;
+    //    }
+    
     func get_Phone_Number() -> Int
     {
         return phone_Number; // 555-555-5555 style number format
     }
-    func get_School() -> String
-    {
-        return school;
-    }
+    //    func get_School() -> String
+    //    {
+    //        return school;
+    //    }
 }
 
-let Adish = ContactInfo
+
+var ContactBook: [String: ContactInfo]

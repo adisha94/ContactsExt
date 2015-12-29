@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class ViewController: UIViewController
 {
 
@@ -25,5 +24,6 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-
+    let Adish = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "Irvington High School")
+    let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "starka", number: 5108763343, school_info: "San Jose State University")
 }
