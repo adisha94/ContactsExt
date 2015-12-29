@@ -8,15 +8,27 @@
 
 import Foundation
 import AddressBook
-
+import Darwin
 
 class ContactInfo
 {
     let name: String
     let phone_Number: Int
     let school: String
-    let id: Int // randomely assign if possible with number generators
-    let is_working : Bool
+ 
+    init (contact_name: String, number: Int, school_info: String)
+    {
+        self.name = contact_name
+        self.phone_Number = number
+        if (school_info.containsString("university") || school_info.containsString("college"))
+        {
+            self.school = school_info
+        }
+        else
+        {
+            self.school = "Not finished high school yet"
+        }
+    }
     
     func get_Name() -> String
     {
@@ -30,9 +42,6 @@ class ContactInfo
     {
         return school;
     }
-    
-    func get_work_status() -> Bool
-    {
-        return is_working;
-    }
 }
+
+let Adish = ContactInfo
