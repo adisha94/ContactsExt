@@ -10,7 +10,7 @@ import Foundation
 import AddressBook
 
 
-struct Contact
+class ContactInfo
 {
     let name: String
     let phone_Number: Int
@@ -29,5 +29,10 @@ struct Contact
     func get_School() -> String
     {
         return school;
+    }
+    
+    func get_work_status() -> Bool
+    {
+        return is_working;
     }
 }
