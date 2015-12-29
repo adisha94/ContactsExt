@@ -37,24 +37,10 @@ class ContactInfo
         }
     }
     
-    //    func get_first_Name() -> String
-    //    {
-    //        return first_Name;
-    //    }
-    //
-    //    func get_last_Name() -> String
-    //    {
-    //        return last_Name;
-    //    }
-    
     func get_Phone_Number() -> Int
     {
         return phone_Number; // 555-555-5555 style number format
     }
-    //    func get_School() -> String
-    //    {
-    //        return school;
-    //    }
 }
 
 let adish = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
@@ -64,10 +50,8 @@ var ContactBook:  [Int : ContactInfo] = [:] // created empty dictionary
 
 func addToContacts(first: String, last: String, phone_number: Int, school_name: String)
 {
-    let newContact: ContactInfo
-    newContact.first_Name = first
-    newContact.last_Name = last
-    newContact.phone_Number = phone_number
-    newContact.school = school_name
+    var newContact: ContactInfo
+    newContact = ContactInfo(contact_first_Name: first, contact_last_Name: last, number: phone_number, school_info: school_name)
     
+    ContactBook.updateValue(newContact, forKey: id++)
 }
