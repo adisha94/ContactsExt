@@ -10,12 +10,14 @@ import Foundation
 import AddressBook
 import Darwin
 
+var id: Int = 0
+
 class ContactInfo
 {
-    let first_Name: String
-    let last_Name: String
-    let phone_Number: Int
-    let school: String
+    var first_Name: String
+    var last_Name: String
+    var phone_Number: Int
+    var school: String
     
     init (contact_first_Name: String, contact_last_Name: String, number: Int, school_info: String)
     {
@@ -55,5 +57,17 @@ class ContactInfo
     //    }
 }
 
+let adish = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108763343, school_info: "San Jose State University")
 
-var ContactBook: [String: ContactInfo]
+var ContactBook:  [Int : ContactInfo] = [:] // created empty dictionary
+
+func addToContacts(first: String, last: String, phone_number: Int, school_name: String)
+{
+    let newContact: ContactInfo
+    newContact.first_Name = first
+    newContact.last_Name = last
+    newContact.phone_Number = phone_number
+    newContact.school = school_name
+    
+}
