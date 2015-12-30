@@ -14,7 +14,6 @@
 		3967F3D91C33128F00CFF470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3967F3D71C33128F00CFF470 /* LaunchScreen.storyboard */; };
 		3967F3E41C33129000CFF470 /* ContactsExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3E31C33129000CFF470 /* ContactsExtTests.swift */; };
 		3967F3EF1C33129000CFF470 /* ContactsExtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3EE1C33129000CFF470 /* ContactsExtUITests.swift */; };
-		3967F4001C3319F100CFF470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3967F3D21C33128F00CFF470 /* Main.storyboard */; };
 		3967F4041C33291D00CFF470 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F4031C33291D00CFF470 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
@@ -254,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3967F4001C3319F100CFF470 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

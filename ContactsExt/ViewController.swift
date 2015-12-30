@@ -26,6 +26,7 @@ class ViewController: UIViewController
 
     @IBOutlet var AddressBook: [UITableView]!
     
+    @IBOutlet weak var ContactCell: UITableViewCell!
     
     
     

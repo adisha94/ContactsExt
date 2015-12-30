@@ -28,16 +28,19 @@ class ContactInfo
 let adish = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
 let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108763343, school_info: "San Jose State University")
 
-var ContactBook: [String: ContactInfo] = ["Adish" : adish]
-ContactBook.updateValue(abinav, forKey: "Abinav")
-ContactBook.updateValue(abinav, forKey: "this is a sample name")
+
+var id: Int = 0
+var ContactBook: [Int: ContactInfo] = [id : adish]
+ContactBook.updateValue(abinav, forKey: id++)
+ContactBook.updateValue(abinav, forKey: id++)
+
+ContactBook
 
 
-
-func addToContacts(first: String, last: String, phone_number: Int, school_name: String)
+func addToContacts( first: String, last: String, phone_number: Int, school_name: String)
 {
     var newContact: ContactInfo
     newContact = ContactInfo(contact_first_Name: first, contact_last_Name: last, number: phone_number, school_info: school_name)
     
-//    ContactBook.updateValue(newContact, forKey: id++)
+    ContactBook.updateValue(newContact, forKey: id++)
 }
