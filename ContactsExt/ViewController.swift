@@ -22,12 +22,6 @@ class ViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    @IBOutlet var AddressBook: [UITableView]!
-    
-    @IBOutlet weak var ContactCell: UITableViewCell!
-    
-    
+    }    
     
 }

@@ -57,3 +57,4 @@ func addToContacts(first: String, last: String, phone_number: Int, school_name: 
     
     ContactBook.updateValue(newContact, forKey: id++)
 }
+
