@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pl1-60-Mny">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -21,7 +21,9 @@
                                 <rect key="frame" x="356" y="497" width="57" height="30"/>
                                 <state key="normal" title="Proceed"/>
                                 <connections>
-                                    <segue destination="ScE-r4-hqk" kind="modal" id="xbz-vS-3KY"/>
+                                    <segue destination="ScE-r4-hqk" kind="popover" popoverAnchorView="fZ6-XG-EJb" id="Z6m-hW-uIh">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Address Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps7-9G-VY2">
@@ -33,53 +35,51 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y7w-7y-ccy"/>
+                    <navigationItem key="navigationItem" id="STY-LM-Jff" userLabel="Back"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1660" y="774"/>
+            <point key="canvasLocation" x="2640" y="774"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Contacts-->
         <scene sceneID="hzI-zj-12c">
             <objects>
-                <tableViewController modalTransitionStyle="crossDissolve" id="ScE-r4-hqk" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Contacts" title="Contacts" modalTransitionStyle="crossDissolve" id="ScE-r4-hqk" customClass="ContactTableViewController" customModule="ContactsExt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4vI-ff-BzR">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csm-oX-nyS">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csm-oX-nyS" id="AHD-6x-ohB">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="e3o-Dx-1OH"/>
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01C-MS-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="810"/>
+            <point key="canvasLocation" x="3664" y="810"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oek-aB-wrh">
+        <!--Main-->
+        <scene sceneID="Wfz-iE-fkU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pl1-60-Mny" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IQF-if-5Pl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" id="oZe-i3-nuT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n0s-WB-F6W">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3sT-hq-U22">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0WE-JL-BFm"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y62-C6-zxm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rbD-RP-Jbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOg-JX-5qU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="774"/>
+            <point key="canvasLocation" x="1660" y="774"/>
         </scene>
     </scenes>
 </document>

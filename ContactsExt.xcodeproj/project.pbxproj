@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3924D0C51C34D1C100222041 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924D0C41C34D1C100222041 /* ContactTableViewController.swift */; };
 		3967F3CF1C33128F00CFF470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3CE1C33128F00CFF470 /* AppDelegate.swift */; };
 		3967F3D11C33128F00CFF470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3D01C33128F00CFF470 /* ViewController.swift */; };
 		3967F3D41C33128F00CFF470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3967F3D21C33128F00CFF470 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3924D0C41C34D1C100222041 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ContactsExt/ContactTableViewController.swift; sourceTree = "<group>"; };
 		3967F3CB1C33128F00CFF470 /* ContactsExt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsExt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3967F3CE1C33128F00CFF470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3967F3D01C33128F00CFF470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		3967F3C21C33128F00CFF470 = {
 			isa = PBXGroup;
 			children = (
+				3924D0C41C34D1C100222041 /* ContactTableViewController.swift */,
 				3967F3CD1C33128F00CFF470 /* ContactsExt */,
 				3967F3E21C33129000CFF470 /* ContactsExtTests */,
 				3967F3ED1C33129000CFF470 /* ContactsExtUITests */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3924D0C51C34D1C100222041 /* ContactTableViewController.swift in Sources */,
 				3967F4041C33291D00CFF470 /* Contact.swift in Sources */,
 				3967F3D11C33128F00CFF470 /* ViewController.swift in Sources */,
 				3967F3CF1C33128F00CFF470 /* AppDelegate.swift in Sources */,
@@ -407,10 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContactsExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AB.ContactsExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactsExt/ContactsExt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -418,10 +425,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ContactsExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AB.ContactsExt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactsExt/ContactsExt-Bridging-Header.h";
 			};
 			name = Release;
 		};
