@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContactsExt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Title Screen" modalTransitionStyle="crossDissolve" modalPresentationStyle="currentContext" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="ContactsExt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -21,9 +21,7 @@
                                 <rect key="frame" x="356" y="497" width="57" height="30"/>
                                 <state key="normal" title="Proceed"/>
                                 <connections>
-                                    <segue destination="ScE-r4-hqk" kind="popover" popoverAnchorView="fZ6-XG-EJb" id="Z6m-hW-uIh">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ScE-r4-hqk" kind="push" id="iiq-3H-mY0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the Address Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps7-9G-VY2">
@@ -32,10 +30,41 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-jL-Mbg">
+                                <rect key="frame" x="355" y="775" width="90" height="30"/>
+                                <state key="normal" title="Testing Hello"/>
+                                <connections>
+                                    <action selector="EditLable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4K6-Lo-E9E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33K-6Z-mLf">
+                                <rect key="frame" x="364" y="735" width="57" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Custom Message" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvy-3o-CEW">
+                                <rect key="frame" x="324" y="657" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a lengthy text interface view" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wf8-nt-7bq">
+                                <rect key="frame" x="280" y="832" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="STY-LM-Jff" userLabel="Back"/>
+                    <connections>
+                        <outlet property="CustomText" destination="cvy-3o-CEW" id="Dqh-E0-Ujc"/>
+                        <outlet property="Sample" destination="33K-6Z-mLf" id="yIZ-Jn-UTs"/>
+                        <outlet property="big_Text" destination="Wf8-nt-7bq" id="39u-fR-FLe"/>
+                        <outlet property="custom_Text" destination="cvy-3o-CEW" id="S47-zs-1AN"/>
+                        <outlet property="sample" destination="33K-6Z-mLf" id="d6r-tf-5s3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,13 +73,14 @@
         <!--Contacts-->
         <scene sceneID="hzI-zj-12c">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01C-MS-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="Contacts" title="Contacts" modalTransitionStyle="crossDissolve" id="ScE-r4-hqk" customClass="ContactTableViewController" customModule="ContactsExt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4vI-ff-BzR">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contacts" id="e3o-Dx-1OH"/>
+                    <navigationItem key="navigationItem" id="nOh-Va-Fn1"/>
                     <keyCommands>
                         <keyCommand/>
                     </keyCommands>
@@ -58,28 +88,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="01C-MS-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3664" y="810"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="Wfz-iE-fkU">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IQF-if-5Pl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Main" id="oZe-i3-nuT"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3sT-hq-U22">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y62-C6-zxm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TOg-JX-5qU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1660" y="774"/>
+            <point key="canvasLocation" x="3984" y="782"/>
         </scene>
     </scenes>
 </document>

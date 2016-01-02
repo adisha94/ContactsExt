@@ -10,6 +10,7 @@ import UIKit
 
 class ContactTableViewController: UITableViewController
 {
-    @IBOutlet weak var contact_Entry: UIView!
+    
+    
 
 }
