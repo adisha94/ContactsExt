@@ -7,11 +7,13 @@
 //
 
 import UIKit
+
 class ViewController: UIViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        print("view loaded")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,18 +25,17 @@ class ViewController: UIViewController
     
     @IBOutlet weak var sample: UILabel!
     @IBOutlet weak var big_Text: UITextView!
-    @IBOutlet weak var custom_Text: UITextField!
 
     @IBAction func EditLable(sender: AnyObject)
     {
-        if (custom_Text.text == nil)
+        if (big_Text.text == "")
         {
-            sample.text = "No message in the textbox above."
+            print("There is noting inside big_text. Value has been set to nil")
         }
         else
         {
-            sample.text = custom_Text.text
-            big_Text.text = "Hello World!. This is anothe big text view"
+            big_Text.text = "Hello World! This is another big text view. Just making sure that this works here."
+            print("There is text inside big_text")
         }
     }
     
