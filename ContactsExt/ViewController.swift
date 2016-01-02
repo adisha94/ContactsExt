@@ -11,10 +11,6 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @IBOutlet weak var sample: UILabel!
-    @IBOutlet weak var big_Text: UITextView!
-    @IBOutlet weak var custom_Text: UITextField!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,6 +25,9 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }    
     
+    @IBOutlet weak var sample: UILabel!
+    @IBOutlet weak var big_Text: UITextView!
+    @IBOutlet weak var custom_Text: UITextField!
 
     @IBAction func EditLable(sender: AnyObject)
     {
