@@ -74,6 +74,7 @@
         <scene sceneID="hzI-zj-12c">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01C-MS-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem id="qPB-bE-MBC"/>
                 <tableViewController storyboardIdentifier="Contacts" title="Contacts" modalTransitionStyle="crossDissolve" id="ScE-r4-hqk" customClass="ContactTableViewController" customModule="ContactsExt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4vI-ff-BzR">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
