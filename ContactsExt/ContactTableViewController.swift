@@ -23,14 +23,33 @@ class ContactTableViewController: UITableViewController
         // Dispose of any resources that can be recreated.
     }
     
-    var ContactBook:  [Int : ContactInfo] = [:] // created empty dictionary
     
-    func addToContacts(first: String, last: String, phone_number: Int, school_name: String)
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        var newContact: ContactInfo
-        newContact = ContactInfo(contact_first_Name: first, contact_last_Name: last, number: phone_number, school_info: school_name)
-        
-        ContactBook.updateValue(newContact, forKey: id++)
+        return 2
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 5
+    }
+    
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return "Section \(section)"
+//    }
+//    
+//    
+//    var ContactBook:  [Int : ContactInfo] = [:] // created empty dictionary
+//    
+//    func addToContacts(first: String, last: String, phone_number: Int, school_name: String)
+//    {
+//        var newContact: ContactInfo
+//        newContact = ContactInfo(contact_first_Name: first, contact_last_Name: last, number: phone_number, school_info: school_name)
+//        
+//        ContactBook.updateValue(newContact, forKey: id++)
+    //}
     }
     
     
