@@ -39,4 +39,23 @@ class ViewController: UIViewController
         }
     }
     
+    
+    func dismissKeyBoardWithReturn(textField: UITextField) -> Bool
+    {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func dismissKeyboardWithTap(textFeild: UITextField)
+    {
+        view.endEditing(true)
+    }
+    
+//    @IBOutlet var tableView: UITableView!
+    
+    
+    
+    
+    
+
 }

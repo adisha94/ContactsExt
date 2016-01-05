@@ -38,8 +38,8 @@ class ContactTableViewController: UITableViewController
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         return "Section \(section)"
-//    }
-//    
+    }
+//
 //    
 //    var ContactBook:  [Int : ContactInfo] = [:] // created empty dictionary
 //    
@@ -50,7 +50,4 @@ class ContactTableViewController: UITableViewController
 //        
 //        ContactBook.updateValue(newContact, forKey: id++)
     //}
-    }
-    
-    
 }

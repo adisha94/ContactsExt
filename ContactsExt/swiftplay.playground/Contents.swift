@@ -32,7 +32,7 @@ let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betaw
 var id: Int = 0
 var ContactBook: [Int: ContactInfo] = [id : adish]
 ContactBook.updateValue(abinav, forKey: id++)
-ContactBook.updateValue(abinav, forKey: id++)
+ContactBook.updateValue(abinav, forKey: id++) // value should be updated
 
 ContactBook
 
@@ -44,3 +44,7 @@ func addToContacts( first: String, last: String, phone_number: Int, school_name:
     
     ContactBook.updateValue(newContact, forKey: id++)
 }
+
+addToContacts("Adada", last: "Merkov", phone_number: 5107625546, school_name: "Tendon University")
+
+ContactBook
