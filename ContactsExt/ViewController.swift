@@ -12,8 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 {
     
     
-    var ContactBook: [String: ContactInfo]
-    var otherArray: [String]
+    var ContactBook: [String: ContactInfo] = [:]
+    var otherArray: [String] = []
     
     let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
     
@@ -61,7 +61,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1 //  This was put in mainly for my own unit testing
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return dataSourceArray.count // Most of the time my data source is an array of something...  will replace with the actual name of the data source
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        // Note:  Be sure to replace the argument to dequeueReusableCellWithIdentifier with the actual identifier string!
+        let cell = tableView.dequeueReusableCellWithIdentifier("ReplaceWithCellIdentifier") as! UITableViewCell
+        
+        // set cell's textLabel.text property
+        // set cell's detailTextLabel.text property
+        return cell
+    }
     
     
 
