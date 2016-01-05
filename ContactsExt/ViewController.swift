@@ -8,13 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    
+    
+    var ContactBook: [String: ContactInfo]
+    var otherArray: [String]
+    
+    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+    
+    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+    
+    let textCellIdentifier = "TextCell"
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         print("view loaded")
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
+        otherArray = ["this is cool", "this is even more cool", "Other things are cool too", "But this is the best so far"]
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let ContactBook_V2 = ContactBook.keys // array of the keys
+        let ContactBook_V3 = ContactBook.values // array of the values
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -23,22 +44,7 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }    
     
-    @IBOutlet weak var sample: UILabel!
-    @IBOutlet weak var big_Text: UITextView!
 
-    @IBAction func EditLable(sender: AnyObject)
-    {
-        if (big_Text.text == "")
-        {
-            print("There is noting inside big_text. Value has been set to nil")
-        }
-        else
-        {
-            big_Text.text = "Hello World! This is another big text view. Just making sure that this works here."
-            print("There is text inside big_text")
-        }
-    }
-    
     
     func dismissKeyBoardWithReturn(textField: UITextField) -> Bool
     {
@@ -51,7 +57,8 @@ class ViewController: UIViewController
         view.endEditing(true)
     }
     
-//    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
+
     
     
     
