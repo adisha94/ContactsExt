@@ -15,12 +15,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var ContactBook: [String: ContactInfo] = [:]
     var otherArray: [String] = []
     
-    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
-    
-    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+//    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+//    
+//    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
     
     let textCellIdentifier = "TextCell"
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,14 +28,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
+//        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
         otherArray = ["this is cool", "this is even more cool", "Other things are cool too", "But this is the best so far"]
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let ContactBook_V2 = ContactBook.keys // array of the keys
-        let ContactBook_V3 = ContactBook.values // array of the values
-        
     }
 
     override func didReceiveMemoryWarning()
@@ -68,13 +64,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return dataSourceArray.count // Most of the time my data source is an array of something...  will replace with the actual name of the data source
+        return ContactBook.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         // Note:  Be sure to replace the argument to dequeueReusableCellWithIdentifier with the actual identifier string!
-        let cell = tableView.dequeueReusableCellWithIdentifier("ReplaceWithCellIdentifier") as! UITableViewCell
+//        var ContactBook_V2 = ContactBook.keys // array of the keys
+//        var ContactBook_V3 = ContactBook.values // array of the values
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let row = indexPath.row
+        cell.textLabel?.text = otherArray[row]
         
         // set cell's textLabel.text property
         // set cell's detailTextLabel.text property
@@ -82,5 +82,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        print("\(otherArray[row])")
+    }
 
 }
