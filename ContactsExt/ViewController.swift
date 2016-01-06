@@ -21,9 +21,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let long_Pressed_View = UILongPressGestureRecognizer()
 
     
-//    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
-//    
-//    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+
+    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+    
+    let OTHERCONTACT: ContactInfo = ContactInfo()
     
     let textCellIdentifier = "TextCell"
 
@@ -34,13 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         
         
-//        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
+        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
         otherArray = ["Adish", "Abinav", "Adada", "Other Contact"]
         tableView.delegate = self
         tableView.dataSource = self
         
         long_Pressed_View.addTarget(self, action: "force_Touch_Contact_Cell")
-//        textCellIdentifier
     }
 
     override func didReceiveMemoryWarning()
@@ -68,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        return 1 //  This was put in mainly for my own unit testing
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -102,7 +103,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func longPressedView()
     {
-        let tapAlert = UIAlertController(title: "Force touch detected", message: "YOu have performed a force touch option on this button.", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let tapAlert = UIAlertController(title: "Force touch detected", message: "You have performed a force touch option on this object.", preferredStyle: UIAlertControllerStyle.ActionSheet)
         tapAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: nil))
         
         self.presentViewController(tapAlert, animated: true, completion: nil)

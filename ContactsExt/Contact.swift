@@ -64,8 +64,8 @@ var Contact_Book: [String : ContactInfo] = [:]
 
 class Contact : UITableViewController
 {
-    var ContactBook: [String: ContactInfo] = [:]
-    var otherArray: [String] = []
+    var other_Array_keys = []
+    var other_Array_values = Contact_Book.values
     let textCellIdentifier = "TextCell"
     
     
@@ -86,7 +86,7 @@ class Contact : UITableViewController
         //        var ContactBook_V3 = ContactBook.values // array of the values
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
         let row = indexPath.row
-        cell.textLabel?.text = otherArray[row]
+        cell.textLabel?.text = (other_Array_keys[row] as! String)
         
         // set cell's textLabel.text property
         // set cell's detailTextLabel.text property
@@ -100,7 +100,7 @@ class Contact : UITableViewController
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        print("\(otherArray[row])")
+        print("\(other_Array_keys[row])")
     }
     
     func longPressedView()
