@@ -35,6 +35,10 @@ class ContactInfo
         }
     }
     
+    func get_Name() -> (String, String)
+    {
+        return (first_Name, last_Name)
+    }
     func get_Phone_Number() -> Int
     {
         return phone_Number; // 555-555-5555 style number format

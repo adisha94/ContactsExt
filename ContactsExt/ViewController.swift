@@ -15,6 +15,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var ContactBook: [String: ContactInfo] = [:]
     var otherArray: [String] = []
     
+    
+    @IBOutlet var force_Touch_Contact_Cell: UIView!
+    
+    let long_Pressed_View = UILongPressGestureRecognizer()
+    
 //    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
 //    
 //    let ABINAV: ContactInfo = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
@@ -29,9 +34,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
 //        ContactBook = ["Adish": ADISH, "Abinav": ABINAV]
-        otherArray = ["this is cool", "this is even more cool", "Other things are cool too", "But this is the best so far"]
+        otherArray = ["Adish", "Abinav", "Adada", "Other Contact"]
         tableView.delegate = self
         tableView.dataSource = self
+        
+        long_Pressed_View.addTarget(self, action: "force_Touch_Contact_Cell")
+//        textCellIdentifier
     }
 
     override func didReceiveMemoryWarning()
@@ -90,5 +98,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let row = indexPath.row
         print("\(otherArray[row])")
     }
-
+    
+    func longPressedView()
+    {
+        let tapAlert = UIAlertController(title: "Force touch detected", message: "YOu have performed a force touch option on this button.", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        tapAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Destructive, handler: nil))
+        
+        self.presentViewController(tapAlert, animated: true, completion: nil)
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391AA2F01C3DA8CB00D339C6 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391AA2EF1C3DA8CB00D339C6 /* ContactCell.swift */; };
 		3924D0C51C34D1C100222041 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3924D0C41C34D1C100222041 /* ContactTableViewController.swift */; };
 		3967F3CF1C33128F00CFF470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3CE1C33128F00CFF470 /* AppDelegate.swift */; };
 		3967F3D11C33128F00CFF470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967F3D01C33128F00CFF470 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		391AA2EF1C3DA8CB00D339C6 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		3924D0C41C34D1C100222041 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		3967F3CB1C33128F00CFF470 /* ContactsExt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsExt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3967F3CE1C33128F00CFF470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				3924D0C41C34D1C100222041 /* ContactTableViewController.swift */,
 				39A991DC1C3C6C8F00AAB01A /* MyTable.swift */,
 				3967F3D21C33128F00CFF470 /* Main.storyboard */,
+				391AA2EF1C3DA8CB00D339C6 /* ContactCell.swift */,
 				3967F4031C33291D00CFF470 /* Contact.swift */,
 				39A991DB1C3C422300AAB01A /* Test2.playground */,
 				3967F4021C33262800CFF470 /* swiftplay.playground */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391AA2F01C3DA8CB00D339C6 /* ContactCell.swift in Sources */,
 				39A991DD1C3C6C8F00AAB01A /* MyTable.swift in Sources */,
 				3924D0C51C34D1C100222041 /* ContactTableViewController.swift in Sources */,
 				3967F4041C33291D00CFF470 /* Contact.swift in Sources */,

@@ -37,6 +37,9 @@
                                 <state key="normal" title="Proceed">
                                     <color key="titleColor" red="0.84756392240524292" green="0.99097925424575806" blue="0.003664359450340271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eO0-8e-u7d" kind="push" id="FG0-Yb-KTb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28740763664245605" green="0.71279501914978027" blue="0.91466015577316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,6 +52,33 @@
                 <viewControllerLayoutGuide type="bottom" id="6yk-Mb-mkg"/>
             </objects>
             <point key="canvasLocation" x="1013" y="433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JIw-1z-irj">
+            <objects>
+                <viewController id="eO0-8e-u7d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVV-lk-CAf"/>
+                        <viewControllerLayoutGuide type="bottom" id="WIK-eq-dIw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mHe-3T-yd2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnQ-yL-m6N">
+                                <rect key="frame" x="99" y="77" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E63-Gh-ZUR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92X-dS-FwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="448"/>
         </scene>
     </scenes>
 </document>
