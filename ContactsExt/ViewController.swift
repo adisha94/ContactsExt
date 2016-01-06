@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var force_Touch_Contact_Cell: UIView!
     
     let long_Pressed_View = UILongPressGestureRecognizer()
+
     
 //    let ADISH: ContactInfo = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
 //    
