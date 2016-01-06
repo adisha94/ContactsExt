@@ -38,3 +38,42 @@ struct Matrix
 }
 
 let mat_A: Matrix = Matrix(rows: 5, columns: 4)
+
+
+
+
+
+
+class ContactInfo
+{
+    var first_Name: String
+    var last_Name: String
+    let phone_Number: Int
+    let school_info: String
+    
+    init (contact_first_Name: String, contact_last_Name: String, number: Int, school_info: String)
+    {
+        self.first_Name = contact_first_Name
+        self.last_Name = contact_last_Name
+        self.phone_Number = number
+        
+        if (school_info.containsString("university") || school_info.containsString("college") || school_info.containsString("University") || school_info.containsString("College"))
+        {
+            self.school_info = school_info
+        }
+        else
+        {
+            self.school_info = "Not finished with high school yet"
+        }
+    }
+}
+let adish = ContactInfo(contact_first_Name: "Adish", contact_last_Name: "Betawar", number: 5108627726, school_info: "San Jose State University")
+let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betawar", number: 5108763343, school_info: "San Jose State University")
+
+
+
+
+
+
+
+
