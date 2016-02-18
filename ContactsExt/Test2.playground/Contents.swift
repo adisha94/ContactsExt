@@ -72,8 +72,3 @@ let abinav = ContactInfo(contact_first_Name: "Abinav", contact_last_Name: "Betaw
 
 
 
-
-
-
-
-
